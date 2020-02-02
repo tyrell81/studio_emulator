@@ -1,5 +1,8 @@
 #include "studio_client_worker.h"
 #include "qt_helpers.h"
+//#include "studio_packets.h"
+#include "tcp_packets.h"
+#include "studio_packets_util.h"
 
 #define HOST "127.0.0.1"
 #define PORT 20002
@@ -58,9 +61,19 @@ void StudioClientWorker::onStateChanged(QAbstractSocket::SocketState socket_stat
 void StudioClientWorker::onReceivedPacket(const QByteArray &ba_packet)
 {
     qCDebug(hfCoreStudioClientWorker) << ba_packet.toHex();
+    studio_packet_out_cmd_a5_t cmd_a5;
+    cmd_a5.header.cmd = 0xa5;
+    cmd_a5.header.addr = 0x00000000;
+//    cmd_a5.
 }
 
 void StudioClientWorker::sendCmdA5()
 {
     qCDebug(hfCoreStudioClientWorker);
+    studio_packet_request request_packet;
+    request_packet.header.addr = 0x00000000;
+    request_packet.header.cmd = 0xa5;
+    QByteArray ba(reinterpret_cast<char*>(&request_packet), sizeof(studio_packet_request));
+//    StudioPacketIn<studio_packet_header_t> packet(QByteArray ba);
+    qCDebug(hfCoreStudioClientWorker()) <<
 }

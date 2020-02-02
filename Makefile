@@ -218,12 +218,14 @@ DIST          = ../../Qt/5.9/gcc_64/mkspecs/features/spec_pre.prf \
 		studio_emulator.pro packets_util.h \
 		pb_protocol.h \
 		pb_sharedlib.h \
+		pvwtc_studio_packets.h \
 		qt_5.4_qcinfo.h \
 		qt_helpers.h \
 		studio_client_worker.h \
 		studio_packets.h \
 		studio_packets_util.h \
 		studio_tcp_socket.h \
+		tcp_packets.h \
 		types.h main.cpp \
 		pb_protocol.c \
 		studio_client_worker.cpp \
@@ -567,7 +569,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../Qt/5.9/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents packets_util.h pb_protocol.h pb_sharedlib.h qt_5.4_qcinfo.h qt_helpers.h studio_client_worker.h studio_packets.h studio_packets_util.h studio_tcp_socket.h types.h $(DISTDIR)/
+	$(COPY_FILE) --parents packets_util.h pb_protocol.h pb_sharedlib.h pvwtc_studio_packets.h qt_5.4_qcinfo.h qt_helpers.h studio_client_worker.h studio_packets.h studio_packets_util.h studio_tcp_socket.h tcp_packets.h types.h $(DISTDIR)/
 	$(COPY_FILE) --parents main.cpp pb_protocol.c studio_client_worker.cpp studio_tcp_socket.cpp $(DISTDIR)/
 
 
@@ -896,7 +898,12 @@ studio_client_worker.o: studio_client_worker.cpp studio_client_worker.h \
 		../../Qt/5.9/gcc_64/include/QtCore/qloggingcategory.h \
 		../../Qt/5.9/gcc_64/include/QtCore/QThread \
 		../../Qt/5.9/gcc_64/include/QtCore/qthread.h \
-		qt_5.4_qcinfo.h
+		qt_5.4_qcinfo.h \
+		tcp_packets.h \
+		studio_packets.h \
+		types.h \
+		../../Qt/5.9/gcc_64/include/QtCore/QObject \
+		pvwtc_studio_packets.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o studio_client_worker.o studio_client_worker.cpp
 
 studio_tcp_socket.o: studio_tcp_socket.cpp studio_tcp_socket.h \

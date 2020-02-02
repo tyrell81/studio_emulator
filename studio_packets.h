@@ -4,6 +4,7 @@
 #define HF_CORE_STUDIO_STUDIO_PACKETS_H_
 
 #include "types.h"
+//#include "tcp_packets.h"
 
 #ifdef __cplusplus
 extern "C" {
