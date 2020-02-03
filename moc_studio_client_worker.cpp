@@ -1,18 +1,19 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'studio_client_worker.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.0)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.13.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
+#include <memory>
 #include "studio_client_worker.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'studio_client_worker.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.0. It"
+#error "This file was generated using the moc from 5.13.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -56,7 +57,7 @@ QT_MOC_LITERAL(11, 171, 9) // "ba_packet"
 static const uint qt_meta_data_StudioClientWorker[] = {
 
  // content:
-       7,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        5,   14, // methods
@@ -86,7 +87,7 @@ static const uint qt_meta_data_StudioClientWorker[] = {
 void StudioClientWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        StudioClientWorker *_t = static_cast<StudioClientWorker *>(_o);
+        auto *_t = static_cast<StudioClientWorker *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->onConnected(); break;
@@ -117,10 +118,14 @@ void StudioClientWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
     }
 }
 
-const QMetaObject StudioClientWorker::staticMetaObject = {
-    { &QObject::staticMetaObject, qt_meta_stringdata_StudioClientWorker.data,
-      qt_meta_data_StudioClientWorker,  qt_static_metacall, nullptr, nullptr}
-};
+QT_INIT_METAOBJECT const QMetaObject StudioClientWorker::staticMetaObject = { {
+    &QObject::staticMetaObject,
+    qt_meta_stringdata_StudioClientWorker.data,
+    qt_meta_data_StudioClientWorker,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
 
 
 const QMetaObject *StudioClientWorker::metaObject() const
@@ -132,7 +137,7 @@ void *StudioClientWorker::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_StudioClientWorker.stringdata0))
-        return static_cast<void*>(const_cast< StudioClientWorker*>(this));
+        return static_cast<void*>(this);
     return QObject::qt_metacast(_clname);
 }
 

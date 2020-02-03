@@ -32,11 +32,13 @@ HEADERS += \
     pb_protocol.h \
     pb_sharedlib.h \
     pvwtc_studio_packets.h \
+    pvwtc_studio_packets.h \
     qt_5.4_qcinfo.h \
     qt_helpers.h \
     studio_client_worker.h \
     studio_packets.h \
     studio_packets_util.h \
     studio_tcp_socket.h \
+    tcp_packets.h \
     tcp_packets.h \
     types.h

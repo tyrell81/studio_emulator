@@ -9,7 +9,7 @@
 
 //#include "core/database/settings.h"
 
-#include "studio_packets.h"
+#include "pvwtc_studio_packets.h"
 //#include "studio_worker.h"
 
 #define SERIAL 0x000000

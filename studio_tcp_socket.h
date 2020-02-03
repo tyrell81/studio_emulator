@@ -34,7 +34,7 @@ protected:
 
 protected slots:
     virtual void onStateChanged(const QAbstractSocket::SocketState state);
-    virtual void onError(const QAbstractSocket::SocketError error);
+    virtual void onError(const QAbstractSocket::SocketError socketError);
 
 private slots:
     void onReadyRead();
